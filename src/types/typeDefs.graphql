@@ -1,0 +1,9 @@
+input usuarioInput {
+    login: String
+    nome: String!
+}
+
+type User {
+    login: String
+    nome: String
+}
