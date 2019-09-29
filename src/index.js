@@ -1,13 +1,13 @@
 require('dotenv').config();
 const { ApolloServer, PubSub } = require('apollo-server');
 const resolvers = require('./resolvers');
-const depthLimit = require('graphql-depth-limit')
-const { createComplexityLimitRule } = require('graphql-validation-complexity')
+const depthLimit = require('graphql-depth-limit');
+const { createComplexityLimitRule } = require('graphql-validation-complexity');
 const typeDefs = require('./types');
-const pubsub = new PubSub()
+const pubsub = new PubSub();
 const connectionDB = require('./config/mongoose');
 
-db = connectionDB();
+const db = connectionDB();
 
 const server = new ApolloServer({
   typeDefs,
@@ -20,8 +20,8 @@ const server = new ApolloServer({
     })
   ],
   context: async ({ req, connection }) => {
-    //   const githubToken = req ? req.headers.authorization : connection.context.Authorization
-    //   const currentUser = await db.collection('users').findOne({ githubToken })
+    //   const token = req ? req.headers.authorization : connection.context.Authorization
+    //   const currentUser = await db.collection('usuario').findOne({ token })
     return { pubsub }
   }
 });
