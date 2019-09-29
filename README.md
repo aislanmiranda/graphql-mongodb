@@ -13,4 +13,4 @@ yarn install
 yarn start
 ```
 
-> **Importante:** Certifique-se de ter instalado em seu host o banco de dados MongoDB seja via `Docker (https://hub.docker.com/_/mongo)` ou `On Premises (https://www.mongodb.com/download-center/charts)`.
+> **Importante:** Certifique-se de ter instalado em seu host o banco de dados MongoDB seja via [Docker] (https://hub.docker.com/_/mongo) ou [On Premises] (https://www.mongodb.com/download-center/charts).
